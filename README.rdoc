@@ -9,7 +9,7 @@ We wanted to solve these problems:
 
 == The Custom Provider
 
-This custom provider acts as an omniauth client (to connecto Twitter & Facebook) AND also
+This custom provider acts as an omniauth client (to connect to Twitter & Facebook) AND also
 acts as a omniauth provider (via auth_controller) to authenticate internal applications.
 
 == Usage
@@ -17,7 +17,7 @@ acts as a omniauth provider (via auth_controller) to authenticate internal appli
 Clone this repository and do a bundle install. NOTE: We are using devise master HEAD
 because it has the latest omniauth integration code.
 
-    git clone git://github.com/joshsoftware/sso-devise-omniauth-demo.git
+    git clone git://github.com/joshsoftware/sso-devise-omniauth-provider.git
     bundle install
     rake db:create
     rake db:migrate
@@ -33,6 +33,13 @@ That's it! Your on your way:
 
     rails server
 
-In your URL:
+In your browser, go for it:
 
     http://localhost:3000
+
+== Contributions
+
+Please feel free to enhance this demo.
+For any doubts, please send an email to gautam@joshsoftware.com
+
+I am eager to write some rspec for this setup. If you do, please send me a pull request!

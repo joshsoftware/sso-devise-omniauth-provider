@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110202133040) do
+ActiveRecord::Schema.define(:version => 20110203105441) do
 
   create_table "access_grants", :force => true do |t|
     t.string   "code"
@@ -18,7 +18,7 @@ ActiveRecord::Schema.define(:version => 20110202133040) do
     t.string   "refresh_token"
     t.datetime "access_token_expires_at"
     t.integer  "user_id"
-    t.integer  "application_id"
+    t.integer  "client_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(:version => 20110202133040) do
     t.datetime "updated_at"
   end
 
-  create_table "client_applications", :force => true do |t|
+  create_table "clients", :force => true do |t|
     t.string   "name"
     t.string   "app_id"
     t.string   "app_secret"

@@ -6,7 +6,7 @@ class CreateAccessGrants < ActiveRecord::Migration
       t.string :refresh_token
       t.datetime :access_token_expires_at
       t.integer :user_id
-      t.integer :application_id
+      t.integer :client_id
 
       t.timestamps
     end

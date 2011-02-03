@@ -1,15 +1,15 @@
 class AccessGrant < ActiveRecord::Base
   belongs_to :user
-  belongs_to :application, :class_name => "ClientApplication"
+  belongs_to :client
   before_create :generate_tokens
-  validates_presence_of :application_id
+
 
   def self.prune!
     delete_all(["created_at < ?", 3.days.ago])
   end
 
   def self.authenticate(code, application_id)
-    AccessGrant.where("code = ? AND application_id = ?", code, application_id).first
+    AccessGrant.where("code = ? AND client_id = ?", code, application_id).first
   end
 
   def generate_tokens

@@ -30,6 +30,9 @@ class AuthController < ApplicationController
     render :json => {:access_token => access_grant.access_token, :refresh_token => access_grant.refresh_token, :expires_in => Devise.timeout_in.to_i}
   end
 
+  def failure
+    render :text => "ERROR: #{params[:message]}"
+  end
 
   def user
     hash = {

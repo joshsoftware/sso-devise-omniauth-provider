@@ -1,6 +1,6 @@
-class CreateClientApplications < ActiveRecord::Migration
+class CreateClient < ActiveRecord::Migration
   def self.up
-    create_table :client_applications do |t|
+    create_table :clients do |t|
       t.string :name
       t.string :app_id
       t.string :app_secret
@@ -10,6 +10,6 @@ class CreateClientApplications < ActiveRecord::Migration
   end
 
   def self.down
-    drop_table :client_applications
+    drop_table :clients
   end
 end
