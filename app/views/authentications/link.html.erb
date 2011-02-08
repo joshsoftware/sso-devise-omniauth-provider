@@ -1,0 +1,8 @@
+<h2> This email is already taken - Sign in to link these accounts!</h2>
+
+<%= form_for(@user, :url => add_account_path(@user)) do |f| %>
+  <p><%= f.label :password %><br />
+  <%= f.password_field :password %></p>
+
+  <p><%= f.submit "Sign in" %></p>
+<% end %>
