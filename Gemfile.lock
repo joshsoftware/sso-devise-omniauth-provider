@@ -1,6 +1,6 @@
 GIT
   remote: git://github.com/plataformatec/devise.git
-  revision: 76a480044688672acdd40469c74c6abfea35f8a4
+  revision: f964ea526bd31a69ab1543a636976d382cee7299
   specs:
     devise (1.2.rc)
       bcrypt-ruby (~> 2.1.2)
@@ -38,15 +38,15 @@ GEM
       activesupport (= 3.0.3)
     activesupport (3.0.3)
     addressable (2.2.4)
-    arel (2.0.7)
+    arel (2.0.8)
     bcrypt-ruby (2.1.4)
     builder (2.1.2)
     cgi_multipart_eof_fix (2.5.0)
     daemons (1.1.0)
     erubis (2.6.6)
       abstract (>= 1.0.0)
-    faraday (0.5.4)
-      addressable (~> 2.2.2)
+    faraday (0.5.5)
+      addressable (~> 2.2.4)
       multipart-post (~> 1.1.0)
       rack (>= 1.1.0, < 2)
     fastthread (1.0.7)
