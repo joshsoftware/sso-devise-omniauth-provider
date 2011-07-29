@@ -1,7 +1,7 @@
-ClientApplication.delete_all
+CreateClient.delete_all
 User.delete_all
 
-ClientApplication.create(
+CreateClient.create(
   :name => "secret",
   :app_id => "demo_id",
   :app_secret => "demo_secret"
