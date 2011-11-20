@@ -5,6 +5,9 @@ require 'rails/all'
 # If you have a Gemfile, require the gems listed there, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env) if defined?(Bundler)
+if defined?(Bundler)
+  Bundler.require(*Rails.groups(:assets => %w(development test)))
+end
 
 module OauthProviderDemo
   class Application < Rails::Application
@@ -38,5 +41,8 @@ module OauthProviderDemo
 
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
+
+    config.assets.enabled = true
+    config.assets.version = '1.0'
   end
 end

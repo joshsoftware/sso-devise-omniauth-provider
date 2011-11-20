@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable, :token_authenticatable,
          :recoverable, :timeoutable, :trackable, :validatable, :rememberable
 
-  self.token_authentication_key = "access_token"
+  self.token_authentication_key = "oauth_token"
 
   attr_accessible :email, :password, :password_confirmation, :remember_me, :first_name, :last_name
 
