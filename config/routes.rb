@@ -9,6 +9,7 @@ OauthProviderDemo::Application.routes.draw do
   match '/auth/josh_id/authorize' => 'auth#authorize'
   match '/auth/josh_id/access_token' => 'auth#access_token'
   match '/auth/josh_id/user' => 'auth#user'
+  match '/oauth/token' => 'auth#access_token'
 
   # Account linking
   match 'authentications/:user_id/link' => 'authentications#link', :as => :link_accounts

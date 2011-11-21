@@ -36,10 +36,11 @@ class AuthController < ApplicationController
 
   def user
     hash = {
-      :provider => 'my_strategy',
-      :uid => current_user.id.to_s,
-      :user_info => {
-         :name => current_user.email, # change if required
+      :provider => 'josh_id',
+      :id => current_user.id.to_s,
+      :info => {
+         :name => current_user.name, # change if required
+         :email => current_user.email, # change if required
       },
       :extra => {
         :admin => current_user.admin?,
