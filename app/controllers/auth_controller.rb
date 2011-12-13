@@ -39,13 +39,7 @@ class AuthController < ApplicationController
       :provider => 'josh_id',
       :id => current_user.id.to_s,
       :info => {
-         :name => current_user.name, # change if required
          :email => current_user.email, # change if required
-      },
-      :extra => {
-        :admin => current_user.admin?,
-        :first_name => current_user.first_name,
-        :last_name => current_user.last_name
       }
     }
 

@@ -1,7 +1,7 @@
 source 'http://rubygems.org'
 
-gem 'rails', '3.1.2'
-gem 'sqlite3'
+gem 'rails', '3.1.3'
+gem 'mysql2'
 
 # asset pipeline
 group :assets do
