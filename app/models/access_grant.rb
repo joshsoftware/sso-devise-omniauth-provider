@@ -24,10 +24,8 @@ class AccessGrant < ActiveRecord::Base
     end
   end
 
-  # Note: This is currently hard coded to 2 days, but it could be configurable 
-  # per-user-type or per-application.
-  # No need for this to be constant like this.
+  # Note: This is currently configured through devise, and matches the AuthController access token life 
   def start_expiry_period!
-    self.update_attribute(:access_token_expires_at, 2.days.from_now)
+    self.update_attribute(:access_token_expires_at, Time.now + Devise.timeout_in)
   end
 end
