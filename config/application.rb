@@ -44,5 +44,8 @@ module OauthProviderDemo
 
     config.assets.enabled = true
     config.assets.version = '1.0'
+
+    # Mass assingment protection
+    config.active_record.whitelist_attributes=true
   end
 end
