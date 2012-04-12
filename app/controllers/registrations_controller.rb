@@ -3,14 +3,14 @@ class RegistrationsController < Devise::RegistrationsController
 
   def new
      # Building the resource with information that MAY BE available from omniauth!
-     build_resource(:first_name => session[:omniauth] && session[:omniauth]['user_info'] && session[:omniauth]['user_info']['first_name'], 
+     build_resource(:first_name => session[:omniauth] && session[:omniauth]['user_info'] && session[:omniauth]['user_info']['first_name'],
          :last_name => session[:omniauth] && session[:omniauth]['user_info'] && session[:omniauth]['user_info']['last_name'],
          :email => session[:omniauth_email] )
-     render_with_scope :new
+     render :new
   end
 
   def create
-    build_resource 
+    build_resource
 
     if session[:omniauth] && @user.errors[:email][0] =~ /has already been taken/
       user = User.find_by_email(@user.email)
@@ -22,7 +22,7 @@ class RegistrationsController < Devise::RegistrationsController
     super
     session[:omniauth] = nil unless @user.new_record?
   end
-  
+
   def build_resource(*args)
     super
 
