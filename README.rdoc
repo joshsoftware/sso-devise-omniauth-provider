@@ -43,3 +43,7 @@ Please feel free to enhance this demo.
 For any doubts, please send an email to gautam@joshsoftware.com
 
 I am eager to write some rspec for this setup. If you do, please send me a pull request!
+
+== License
+
+This is released under the MIT license.
